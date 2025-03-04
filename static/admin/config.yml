@@ -1,0 +1,80 @@
+# when using the default proxy server port
+# local_backend: true
+
+backend:
+  name: git-gateway
+  # dетка, в которую, будут вносится изменения, сделанные в CMS
+  branch: main
+
+# 
+local_backend:
+  # when using a custom proxy server port
+  url: http://localhost:8082/api/v1
+  # when accessing the local site from a host other than 'localhost' or '127.0.0.1'
+  allowed_hosts: ['192.168.0.1']
+
+# Адрес расположения изображений, добавленных через CMS
+media_folder: static/images/cmsUploads
+# Адрес относительно опубликованной страницы. Елси не указать будет использован media_folder!!!
+public_folder: /images/cmsUploads/
+
+# i18n:
+#   # Required and can be one of multiple_folders, multiple_files or single_file
+#   # multiple_folders - persists files in `<folder>/<locale>/<slug>.<extension>`
+#   # multiple_files - persists files in `<folder>/<slug>.<locale>.<extension>`
+#   # single_file - persists a single file in `<folder>/<slug>.<extension>`
+#   structure: multiple_folders
+
+#   # Required - a list of locales to show in the editor UI
+#   locales: [ru, en]
+
+#   # Optional, defaults to the first item in locales.
+#   # The locale to be used for fields validation and as a baseline for the entry.
+#   default_locale: ru
+
+collections:
+  # - name: i18n_content
+  #   # same as the top level, but all fields are optional and defaults to the top level
+  #   # can also be a boolean to accept the top level defaults
+  #   i18n: true
+
+  - name: 'posts'
+    label: 'Статьи'
+    folder: 'content/posts'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    identifier_field: title
+    fields:
+      - { label: 'Заголовок', name: 'title', widget: 'string', required: true }
+      - { label: 'Дата', name: 'date', widget: 'datetime' }
+      - { label: 'Изображение', name: 'image', widget: 'string' }
+      - { label: 'Описание', name: 'description', widget: 'string' }
+      - { label: 'Черновик', name: 'draft', widget: 'boolean', default: false }
+      - { label: 'Текст', name: 'body', widget: 'markdown' }
+
+  - name: 'Pages'
+    label: 'Страницы'
+    files:
+      - label: "О компании"
+        name: "about"
+        file: "content/pages/about/index.md"
+        fields:
+          # - { label: 'Заголовок', name: 'title', widget: 'string' }
+          - { label: 'Изображение', name: 'image', widget: 'image', choose_url: true, default: "/images/cmsUploads/about.jpg" }
+          - { label: 'Текст', name: 'body', widget: 'markdown' }
+
+  - name: 'reviews'
+    label: 'Отзывы'
+    folder: 'content/reviews'
+    create: true
+    slug: '{{slug}}'
+    path: 'reviews/{{fields.slug}}/{{filename}}'
+    editor:
+      preview: true
+    identifier_field: author
+    fields:
+      - { label: 'Автор', name: 'author', widget: 'string', required: true }
+      - { label: 'Позиция', name: 'position', widget: 'number' }
+      - { label: 'Текст', name: 'body', widget: 'markdown' }
