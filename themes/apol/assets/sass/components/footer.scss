@@ -1,0 +1,53 @@
+footer {
+  margin-top: 1rem;
+
+  .container {
+    @media screen and (max-width: 520px) {
+      flex-direction: column;
+    }
+  }
+
+  h2 {
+      margin-top: 0.8rem;
+      margin-bottom: 0.5rem;
+  }
+
+  hr {
+      height: 0;
+      margin: 0 auto;
+      background-color: var(--bgc-footer);
+
+      margin-top: 0.2rem;
+      margin-bottom: 0rem;
+      border: 0;
+      border-top: 1px solid var(--secondary-color);
+  }
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  background-color: var(--bgc-copyright);
+
+  .apol-logo {
+    padding-right: 0.5rem;
+  }
+
+  @media screen and (max-width: 520px) {
+    & + span {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.switch-color {
+  color: var(--color);
+}
+
+.apol-logo {
+  height: 2.4em;
+}
+
+html[data-theme="dark"] .copyright .apol-logo {
+  filter: invert(1);
+}

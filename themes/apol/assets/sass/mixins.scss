@@ -1,0 +1,5 @@
+// Размер шрифта
+// Использование: @include fsz(32px);
+@mixin fsz($size) {
+	font-size: $size;
+}

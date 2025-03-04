@@ -1,0 +1,48 @@
+{{ define "header"}}
+  {{ partial "header" . }}
+{{ end }}
+
+{{ define "main" }}
+
+  {{ if .Params.Lead }}
+
+    <section class="lead">
+      <img src="{{ .Params.Image }}" alt="{{ .Title }}">
+
+      <div class="container">
+        <h1>О компании</h1>
+        <p>{{ .Content }}</p>
+      </div>
+    </section>
+
+  {{ else }}
+
+    <div class="container">
+      <h1>{{ .Title }}</h1>
+
+      {{ if .Params.Author }}
+        <div class="reviews__author">{{ .Params.Author }}</div>
+      {{ end }}
+
+      {{ if .Params.Image }}
+        <div class="post-description">
+          {{ .Params.Description }}
+        </div>
+
+        <div class="post-image-container">
+          <img src="{{ .Params.Image }}" alt="{{ .Title }}">
+        </div>
+      {{ end }}
+
+      {{ .Content }}
+    </div>
+
+  {{ end }}
+
+{{ end }}
+
+{{ define "scripts" }}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="module" src="/js/modules.js"></script>
+  <script src="/js/main.js"></script>
+{{ end }}

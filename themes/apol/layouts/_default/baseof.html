@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+  lang        - можно указывать динамически!!!
+  data-theme  - нужен для переключения тёмной/светлой темы
+  data-page   - для определения страницы на которой находишься,
+                указывается во Front Matter на страницах контента в параметре datapage
+                используется в JavaScript, чтобы не подгружать лишние скрипты, например,
+                на "Главной" странице есть слайдер, а на странице "Обо мне" нет,
+                поэтому библиотека SlickSlider будет подгружаться только на главной.
+  -->
+<html lang="ru" data-theme="light" data-page="{{ .Params.datapage }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
+
+    <!-- Мета данные -->
+    <meta name="keywords" content="blog, posts, list" />
+    <meta name="description" content="Blog list" />
+
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="/img/front.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://" />
+
+    {{ $sass := resources.Get "sass/main.scss" | css.Sass (dict "targetPath"
+    "css/style.css") }}
+    <link rel="stylesheet" href="{{ $sass.RelPermalink }}" />
+  </head>
+  <body>
+    {{ block "header" . }}{{ end }}
+
+    <main>
+      <!-- Основная часть страницы -->
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer" }}
+
+    <!-- Скрипты -->
+    {{ block "scripts" . }}{{ end }}
+  </body>
+</html>

@@ -1,0 +1,14 @@
+@import "variables";
+@import "mixins";
+
+// Общие стили
+@import "common";
+
+// Компонены
+@import "components/header";
+@import "components/footer";
+
+@import "components/posts-list";
+@import "components/reviews";
+
+@import "utility";
