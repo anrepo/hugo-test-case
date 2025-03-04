@@ -1,0 +1,18 @@
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+}
+
+// Display
+.inline   { display: inline }
+.block    {display: block }
+.flex     { display: flex }
+.grid     { display: grid }
+
+.fg-1 { flex-grow: 1 }
+
+.ai-center  { align-items: center }
+.jc-center  { justify-content: center }
+.jc-between { justify-content: space-between }
+
+.flex__column { flex-direction: column }

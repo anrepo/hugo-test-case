@@ -1,0 +1,25 @@
+{{ define "header" }}
+  {{ partial "header" . }}
+{{ end }}
+
+{{ define "main" }}
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+
+    <section id="posts-list">
+      <h2>Список статей</h2>
+      {{ partial "components/posts-list" . }}
+    </section>
+
+    <section id="reviews">
+      <h2>Список отзывов</h2>
+      {{ partial "components/reviews" . }}
+    </section>
+  </div>
+{{ end }}
+
+{{ define "scripts" }}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="module" src="/js/modules.js"></script>
+  <script src="/js/main.js"></script>
+{{ end }}

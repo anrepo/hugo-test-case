@@ -1,0 +1,9 @@
+<div class="reviews__list">
+  {{ range where .Site.RegularPages "Section" "reviews" }}
+    <div class="reviews__item">
+      <div class="reviews__author">{{ .Params.Author }}</div>
+      <div class="reviews__content">{{ .Content }}</div>
+      <a href="{{ .Permalink }}">Открыть статью</a>
+    </div>
+  {{ end }}
+</div>
