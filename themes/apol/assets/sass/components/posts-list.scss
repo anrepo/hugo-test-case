@@ -1,5 +1,6 @@
 .post-card {
   &__list {
+    padding: 0.1px 0;
     gap: 1.2rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
