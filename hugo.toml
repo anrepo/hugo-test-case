@@ -4,3 +4,37 @@ title = 'Hugo Test Case'
 author = "Apol"
 theme = "apol"
 
+[menu]
+	[[menu.header]]
+    identifier = 'home'
+    name = 'Главная'
+    url = '/'
+    weight = 1
+	[[menu.header]]
+		identifier = 'about'
+		name = 'О компании'
+		url = '/about'
+		weight = 2
+	[[menu.header]]
+		identifier = 'postsList'
+		name = 'Статьи'
+		weight = 3
+    url = '#posts-list'
+    [menu.header.params]
+		  onlyHome = true
+      subUrl = '#posts-list'
+	[[menu.header]]
+		identifier = 'reviews'
+		name = 'Отзывы'
+		weight = 4
+    url = '#reviews'
+    [menu.header.params]
+		  onlyHome = true
+		  subUrl = '#reviews'
+
+[markup]
+	[markup.goldmark]
+		[markup.goldmark.renderer]
+			# unsafe - со значением "true" позвоняет использовать html и javascript в файлах с расширением *.md (Markdown)
+			# по умолчанию unsafe = false
+			unsafe = true
