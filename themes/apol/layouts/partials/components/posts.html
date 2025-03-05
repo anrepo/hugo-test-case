@@ -1,0 +1,14 @@
+<div class="post-card__list">
+  {{ range where .Site.RegularPages "Section" "posts" }}
+    <a class="post-card__link" href="{{ .Permalink }}">
+      <div class="post-card__item">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="post-card__image">
+
+        <div class="post-card__content">
+          <div class="post-card__title">{{ .Title }}</div>
+          <div class="post-card__description">{{ .Params.description }}</div>
+        </div>
+      </div>
+    </a>
+  {{ end }}
+</div>

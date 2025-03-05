@@ -1,4 +1,16 @@
 .post-card {
+  &__link {
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-decoration: none;
+
+    &:hover {
+      box-shadow: 0 0 4px 4px rgba(0, 161, 255, 0.4);
+    }
+  }
+
   &__list {
     padding: 0.1px 0;
     gap: 1.2rem;
@@ -17,13 +29,6 @@
       grid-template-columns: repeat(1, 1fr);
     }
   }
-
-  &__item {
-    border-radius: 16px;
-    background-color: #fff;
-    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-  }
   
   &__image {
     width: 100%;
@@ -36,6 +41,7 @@
   }
 
   &__title {
+    color: var(--color);
     font-weight: bold;
   }
 }
@@ -43,6 +49,7 @@
 // For Single Page
 .post {
   &-description {
+    color: var(--color);
     font-style: italic;
   }
 

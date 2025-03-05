@@ -19,15 +19,13 @@ theme = "apol"
 		identifier = 'postsList'
 		name = 'Статьи'
 		weight = 3
-    url = '#posts-list'
     [menu.header.params]
 		  onlyHome = true
-      subUrl = '#posts-list'
+      subUrl = '#posts'
 	[[menu.header]]
 		identifier = 'reviews'
 		name = 'Отзывы'
 		weight = 4
-    url = '#reviews'
     [menu.header.params]
 		  onlyHome = true
 		  subUrl = '#reviews'

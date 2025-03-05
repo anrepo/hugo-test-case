@@ -1,9 +1,5 @@
-{{ define "header"}}
-  {{ partial "header" . }}
-{{ end }}
-
 {{ define "main" }}
-
+<main>
   {{ if .Params.Lead }}
 
     <section class="lead">
@@ -38,7 +34,7 @@
     </div>
 
   {{ end }}
-
+</main>
 {{ end }}
 
 {{ define "scripts" }}
