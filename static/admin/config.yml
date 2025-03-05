@@ -4,10 +4,10 @@
 backend:
   name: github
   repo: anrepo/hugo-test-case
-  # dетка, в которую, будут вносится изменения, сделанные в CMS
+  preview_context: public
+  # ветка, в которую, будут вносится изменения, сделанные в CMS
   branch: main
 
-# 
 local_backend:
   # when using a custom proxy server port
   url: http://localhost:8082/api/v1
@@ -43,14 +43,14 @@ collections:
     label: 'Статьи'
     folder: 'content/posts'
     create: true
-    slug: '{{slug}}'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
       preview: true
     identifier_field: title
     fields:
       - { label: 'Заголовок', name: 'title', widget: 'string', required: true }
       - { label: 'Дата', name: 'date', widget: 'datetime' }
-      - { label: 'Изображение', name: 'image', widget: 'string' }
+      - { label: 'Изображение', name: 'image', widget: 'image' }
       - { label: 'Описание', name: 'description', widget: 'string' }
       - { label: 'Черновик', name: 'draft', widget: 'boolean', default: false }
       - { label: 'Текст', name: 'body', widget: 'markdown' }
