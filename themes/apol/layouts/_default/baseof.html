@@ -21,7 +21,7 @@
 
     <meta property="og:title" content="{{ .Title }}" />
     <meta property="og:description" content="" />
-    <meta property="og:image" content="/img/front.png" />
+    <meta property="og:image" content="/images/front.png" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://" />
 
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="{{ $sass.RelPermalink }}" />
   </head>
   <body>
-    {{ partial "header" }}
+    {{ partial "header" . }}
 
     <!-- Основная часть страницы -->
     {{ block "main" . }}{{ end }}
