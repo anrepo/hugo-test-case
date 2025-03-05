@@ -15,8 +15,8 @@ local_backend:
   allowed_hosts: ['192.168.0.1']
 
 # Адрес расположения изображений, добавленных через CMS
-media_folder: static/images/cmsUploads
-# Адрес относительно опубликованной страницы. Елси не указать будет использован media_folder!!!
+media_folder: static/images/cmsUploads/
+# Адрес относительно опубликованной страницы. Еcли не указать будет использован media_folder!!!
 public_folder: /images/cmsUploads/
 
 # i18n:
