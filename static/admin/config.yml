@@ -4,7 +4,7 @@
 backend:
   name: github
   repo: anrepo/hugo-test-case
-  preview_context: public
+  preview_context: /public
   # ветка, в которую, будут вносится изменения, сделанные в CMS
   branch: main
 
@@ -54,23 +54,11 @@ collections:
       - { label: 'Черновик', name: 'draft', widget: 'boolean', default: false }
       - { label: 'Текст', name: 'body', widget: 'markdown' }
 
-  - name: 'Pages'
-    label: 'Страницы'
-    files:
-      - label: "О компании"
-        name: "about"
-        file: "content/pages/about/index.md"
-        fields:
-          # - { label: 'Заголовок', name: 'title', widget: 'string' }
-          - { label: 'Изображение', name: 'image', widget: 'image', choose_url: true, default: "/images/cmsUploads/about.jpg" }
-          - { label: 'Текст', name: 'body', widget: 'markdown' }
-
   - name: 'reviews'
     label: 'Отзывы'
     folder: 'content/reviews'
     create: true
     slug: '{{slug}}'
-    path: 'reviews/{{fields.slug}}/{{filename}}'
     editor:
       preview: true
     identifier_field: author
@@ -78,3 +66,13 @@ collections:
       - { label: 'Автор', name: 'author', widget: 'string', required: true }
       - { label: 'Позиция', name: 'position', widget: 'number' }
       - { label: 'Текст', name: 'body', widget: 'markdown' }
+
+  - label: 'Pages'
+    name: 'pages'
+    files:
+      - label: "О компании"
+        name: "about"
+        file: "content/about.md"
+        fields:
+          - { label: 'Изображение', name: 'image', widget: 'image', choose_url: true, default: "/images/cmsUploads/about.jpg" }
+          - { label: 'Текст', name: 'body', widget: 'markdown' }

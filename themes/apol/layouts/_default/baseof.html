@@ -31,12 +31,10 @@
     <link rel="stylesheet" href="{{ $sass.RelPermalink }}" />
   </head>
   <body>
-    {{ block "header" . }}{{ end }}
+    {{ partial "header" }}
 
-    <main>
-      <!-- Основная часть страницы -->
-      {{ block "main" . }}{{ end }}
-    </main>
+    <!-- Основная часть страницы -->
+    {{ block "main" . }}{{ end }}
 
     {{ partial "footer" }}
 

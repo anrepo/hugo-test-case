@@ -1,14 +1,11 @@
-{{ define "header" }}
-  {{ partial "header" . }}
-{{ end }}
-
 {{ define "main" }}
+<main>
   <div class="container">
     <h1>{{ .Title }}</h1>
 
-    <section id="posts-list">
+    <section id="posts">
       <h2>Список статей</h2>
-      {{ partial "components/posts-list" . }}
+      {{ partial "components/posts" . }}
     </section>
 
     <section id="reviews">
@@ -16,6 +13,7 @@
       {{ partial "components/reviews" . }}
     </section>
   </div>
+</main>
 {{ end }}
 
 {{ define "scripts" }}
