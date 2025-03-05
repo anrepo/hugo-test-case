@@ -67,7 +67,7 @@ collections:
       - { label: 'Позиция', name: 'position', widget: 'number' }
       - { label: 'Текст', name: 'body', widget: 'markdown' }
 
-  - label: 'Pages'
+  - label: 'Страницы'
     name: 'pages'
     files:
       - label: "О компании"
