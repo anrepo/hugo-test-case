@@ -10,7 +10,7 @@
 https://perx-hugo-test-case.netlify.app/admin/
 ```
 
-![Login width Netlify Identity](/static/manual/netlify-identity-01.jpg "Login width Netlify Identity")
+![Login width Netlify Identity](images/netlify-identity-01.jpg "Login width Netlify Identity")
 
 Доступ в админку предоставляется через систему Netlify Identity по инвайту на почту. После чего нужно подтвердить почту пройдя по ссылке. И ввести желаемый пароль для дальнейшего использования.
 
