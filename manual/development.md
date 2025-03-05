@@ -3,6 +3,7 @@
 В проекте используется:
 
 - Scss
+- Javascript (модули, IIFE)
 - jQuery
 - decap-server - для локальной работы с CMS
 

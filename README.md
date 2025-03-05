@@ -4,9 +4,9 @@
 
 ## Инструкции
 
-* [Как авторизоваться?](authorized.md)
-* [Добавление контента](how-create-new-post.md)
-* [Для разработчиков](development.md)
+* [Как авторизоваться?](manual/authorized.md)
+* [Добавление контента](manual/how-create-new-post.md)
+* [Для разработчиков](manual/development.md)
 
 ## Список источников
 
@@ -16,4 +16,5 @@
 * [Деплой проекта Netlify](https://app.netlify.com/)
 * [Инструкция по настройке Decap Server](https://decapcms.org/docs/working-with-a-local-git-repository/)
 * [Инструкция по настройке Hugo на Netlify](https://docs.netlify.com/frameworks/hugo/)
+* [SCSS документация](https://sass-scss.ru/documentation/)
 * [Тема](https://anrepo.github.io/)
