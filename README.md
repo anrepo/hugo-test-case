@@ -1,5 +1,14 @@
 # Hugo Test Case
 
+Проект выполнен на связке Hugo + GitHub + Netlify.
+
+* Репозиторий (исходники): [GitHub](https://github.com/anrepo/hugo-test-case)
+
+## Инструкции
+
+* [Как авторизоваться?](authorized.md)
+* [Добавление контента](how-create-new-post.md)
+
 ## Запуск в режиме разработки
 
 > `hugo server -w -D -E -F`
