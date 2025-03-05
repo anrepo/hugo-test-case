@@ -2,6 +2,8 @@
 
 Проект выполнен на связке Hugo + GitHub + Netlify.
 
+Сайт доступен по [ссылке](https://perx-hugo-test-case.netlify.app/)
+
 ## Инструкции
 
 * [Как авторизоваться?](manual/authorized.md)
