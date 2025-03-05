@@ -49,7 +49,6 @@ collections:
     identifier_field: title
     fields:
       - { label: 'Заголовок', name: 'title', widget: 'string', required: true }
-      - { label: 'Дата', name: 'date', widget: 'datetime' }
       - { label: 'Изображение', name: 'image', widget: 'image' }
       - { label: 'Описание', name: 'description', widget: 'string' }
       - { label: 'Черновик', name: 'draft', widget: 'boolean', default: false }
