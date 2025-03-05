@@ -2,9 +2,9 @@
 # local_backend: true
 
 backend:
-  name: github
+  name: git-gateway
   repo: anrepo/hugo-test-case
-  preview_context: /public
+  # preview_context: /public
   # ветка, в которую, будут вносится изменения, сделанные в CMS
   branch: main
 
