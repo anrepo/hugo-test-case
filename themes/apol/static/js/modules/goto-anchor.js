@@ -15,6 +15,12 @@ let anchorSlider = (function () {
           let hrefLink = $(this).attr("sub-href").substring(1);
           let offestY = $("#" + hrefLink).offset();
 
+          let menuButton = this.closest(".header-nav").querySelector(".menu-btn");
+
+          if (this.hasAttribute("sub-href") && menuButton.classList.contains("is-active")) {
+            menuButton.classList.remove("is-active");
+          }
+
           // скроллинг с плавной анимацией
           $("html, body")
             .stop()

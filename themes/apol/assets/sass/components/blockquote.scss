@@ -1,6 +1,6 @@
 blockquote {
   font-size: 1.4em;
-  width: 60%;
+  width: 70%;
   margin: 1.4rem auto;
   font-family: Open Sans;
   font-style: italic;
@@ -10,6 +10,14 @@ blockquote {
   line-height: 1.6;
   position: relative;
   background: #ededed;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 520px) {
+    padding: 75px 30px 1.2em 30px;
+  }
 }
 
 blockquote::before {

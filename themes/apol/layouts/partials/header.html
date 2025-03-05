@@ -2,6 +2,11 @@
   <div class="container flex jc-between">
       <a id="header-logo" class="header-logo" href="/">APOL</a>
       <div class="header-nav flex">
+        <button class="menu-btn" type="button" aria-label="Menu" aria-controls="navigation">
+          <span class="menu-btn__block">
+            <span class="menu-btn__inner"></span>
+          </span>
+        </button>
         {{ partial "components/menu" . }}
       </div>
   </div>
