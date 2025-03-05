@@ -4,8 +4,6 @@ let navMenu = (function () {
   function init() {
     const links = document.querySelectorAll(".nav-menu-link");
 
-    console.log(urlPath);
-
     for (let item of links) {
       item.addEventListener("click", () => {
         clear(links);

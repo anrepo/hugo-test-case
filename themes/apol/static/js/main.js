@@ -1,5 +1,5 @@
 // Components
-let currentYear, anchorLinks, navLinks;
+let currentYear, anchorLinks, navLinks, navButton;
 
 // Global Variables
 let heightHeader;
