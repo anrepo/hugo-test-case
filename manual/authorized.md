@@ -21,8 +21,8 @@ https://perx-hugo-test-case.netlify.app/admin/
 * mail: dev-tester@list.ru
 * password: 123test321
 
-![Log in](/static/manual/netlify-identity-02.jpg "Log in")
+![Log in](images/netlify-identity-02.jpg "Log in")
 
 При успешном входе увидим CMS
 
-![CMS](/static/manual/netlify-identity-03.jpg "CMS")
+![CMS](images/netlify-identity-03.jpg "CMS")
