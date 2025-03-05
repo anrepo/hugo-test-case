@@ -2,7 +2,8 @@
 # local_backend: true
 
 backend:
-  name: git-gateway
+  name: github
+  repo: anrepo/hugo-test-case
   # dетка, в которую, будут вносится изменения, сделанные в CMS
   branch: main
 
